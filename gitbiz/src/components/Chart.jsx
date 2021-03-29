@@ -1,6 +1,6 @@
 const Chart = () => {
   return (
-    <div>
+    <div id="chart">
       <p>CHART HERE</p>
     </div>
   )

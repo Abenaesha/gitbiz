@@ -1,7 +1,7 @@
 const Header = () => {
   return (
-    <header>
-      <h1>Gitbiz</h1>
+    <header className="header">
+      <h1><span>G</span>itbiz</h1>
       <h2>The biz that gets the Git</h2>
     </header>
   )

@@ -9,14 +9,13 @@ class Username extends React.Component {
   };
 
   render() {
-    console.log(this.state)
+    // console.log(this.state)
     return (
-      <form onSubmit={(e) => {
+      <form id="form" onSubmit={(e) => {
         e.preventDefault()
         this.props.addUser(this.state.inputUsername)
         this.setState({ inputUsername: '' })
       }}>
-        <label htmlFor="username">Enter your GitHub username:</label>
         <input type="text" id="username" placeholder="GitHub username" onChange={this.handleChange}/>
         <button type="submit">Add your GitHub profile</button>
       </form>
