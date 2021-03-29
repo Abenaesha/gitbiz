@@ -1,9 +1,11 @@
 import Cards from "./Cards"
 
-const Cardlist = () => {
+const Cardlist = ({users}) => {
   return (
     <main>
-      <Cards />
+      {users.map((user) => {
+        return <Cards key={user.id} user={user}/>
+      })}
     </main>
   )
 }

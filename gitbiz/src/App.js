@@ -10,19 +10,18 @@ const GITHUB_API = 'https://api.github.com/users/';
 
 class App extends React.Component {
   state = {
-    users: [],
+    users: []
   };
   addUser = (username) => {
-    // this.prevent.default()
     fetch(`${GITHUB_API}${username}`)
       .then((res) => {
-        console.log(res)
+        console.log(res);
         return res.json();
       })
       .then((data) => {
         this.setState((currentState) => {
           const tmpUsers = [...currentState.users, data];
-          return { users: tmpUsers, inputUsername: '' };
+          return { users: tmpUsers };
         });
       })
       .catch((err) => {
@@ -60,15 +59,43 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.inputUsername);
+    console.log(this.state);
     return (
       <div className="App">
         <Header />
         <Username addUser={this.addUser} handleChange={this.handleChange} />
-        <Cardlist />
+        <Cardlist users={this.state.users} />
       </div>
     );
   }
 }
 
 export default App;
+
+/*
+
+login
+id
+avatar_url
+html_url
+repos_url
+location
+twitter_username
+email
+hireable
+followers_url
+blog
+bio
+name
+company
+
+https://api.github.com/users/galambborong/repos
+
+-- language
+
+https://api.github.com/repos/galambborong/dotfiles/commits
+
+-- length
+
+
+*/

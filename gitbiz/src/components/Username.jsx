@@ -12,8 +12,8 @@ class Username extends React.Component {
     console.log(this.state)
     return (
       <form onSubmit={(e) => {
-        this.prevent.default(e)
-        // this.props.addUser(this.state.inputUsername)
+        e.preventDefault()
+        this.props.addUser(this.state.inputUsername)
         this.setState({ inputUsername: '' })
       }}>
         <label htmlFor="username">Enter your GitHub username:</label>
