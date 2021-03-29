@@ -11,12 +11,12 @@ const GITHUB_API = 'https://api.github.com/users/';
 class App extends React.Component {
   state = {
     users: [],
-    inputUsername: ''
   };
-
-  addUser = () => {
-    fetch(`${GITHUB_API}${this.state.inputUsername}`)
+  addUser = (username) => {
+    // this.prevent.default()
+    fetch(`${GITHUB_API}${username}`)
       .then((res) => {
+        console.log(res)
         return res.json();
       })
       .then((data) => {
@@ -28,10 +28,6 @@ class App extends React.Component {
       .catch((err) => {
         console.log(err);
       });
-  };
-
-  handleChange = ({ target }) => {
-    this.setState({ inputUsername: target.value });
   };
 
   componentDidMount() {
@@ -64,7 +60,7 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state);
+    console.log(this.state.inputUsername);
     return (
       <div className="App">
         <Header />

@@ -1,11 +1,27 @@
-const Username = (props) => {
-  return (
-    <form onSubmit={props.addUser}>
-      <label htmlFor="username">Enter your GitHub username:</label>
-      <input type="text" id="username" placeholder="GitHub username" onChange={props.handleChange}/>
-      <button type="submit">Add your GitHub profile</button>
-    </form>
-  )
+import React from 'react';
+class Username extends React.Component {
+  state = {
+    inputUsername: ''
+  }
+
+  handleChange = ({ target }) => {
+    this.setState({ inputUsername: target.value });
+  };
+
+  render() {
+    console.log(this.state)
+    return (
+      <form onSubmit={(e) => {
+        this.prevent.default(e)
+        // this.props.addUser(this.state.inputUsername)
+        this.setState({ inputUsername: '' })
+      }}>
+        <label htmlFor="username">Enter your GitHub username:</label>
+        <input type="text" id="username" placeholder="GitHub username" onChange={this.handleChange}/>
+        <button type="submit">Add your GitHub profile</button>
+      </form>
+    )
+  }
 }
 
-export default Username
+export default Username;
