@@ -21,7 +21,7 @@ class App extends React.Component {
       .then((data) => {
         this.setState((currentState) => {
           const tmpUsers = [...currentState.users, data];
-          return { users: tmpUsers, isLoaded: true};
+          return { users: tmpUsers, isLoaded: true };
         });
       })
       .catch((err) => {
@@ -30,19 +30,21 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    this.addUser(Peter);
     this.addUser(Abdalraof);
+    this.addUser(Peter);
   }
 
   render() {
-    const {isLoaded} = this.state;
-    // return isLoaded ? <Cardlist users={this.state.users} />
-    // : <p>Your biz is important to us...! Please hold</p>
+    const { isLoaded } = this.state;
     return (
       <div className="App">
         <Header />
         <Username addUser={this.addUser} handleChange={this.handleChange} />
-        {isLoaded ? <Cardlist users={this.state.users} /> : <p>Your biz is important to us...! Please hold</p>}
+        {isLoaded ? (
+          <Cardlist users={this.state.users} />
+        ) : (
+          <p>Your biz is important to us...! Please hold</p>
+        )}
       </div>
     );
   }
