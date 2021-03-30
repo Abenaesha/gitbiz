@@ -10,4 +10,4 @@ const Cardlist = ({users}) => {
   )
 }
 
-export default Cardlist
+export default Cardlist;
