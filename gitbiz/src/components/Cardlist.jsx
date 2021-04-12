@@ -2,7 +2,7 @@ import Cards from "./Cards"
 
 const Cardlist = ({users}) => {
   return (
-    <main id="cardlist">
+    <main className="cardlist">
       {users.map((user) => {
         return <Cards key={user.id} user={user}/>
       })}

@@ -23,7 +23,7 @@ const Cards = ({ user }) => {
   });
 
   return (
-    <section id="card">
+    <section className="card">
       <h3 className="username">{login}</h3>
       <img src={avatar_url} alt="username"></img>
       <p className="bio">{bio}</p>

@@ -11,7 +11,7 @@ class Username extends React.Component {
   render() {
     return (
       <form
-        id="form"
+        className="form"
         onSubmit={(e) => {
           e.preventDefault();
           this.props.addUser(this.state.inputUsername);

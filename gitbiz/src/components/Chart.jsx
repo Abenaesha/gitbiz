@@ -46,7 +46,6 @@ class Chart extends React.Component {
       .then(({ languages, indexes }) => {
         this.setState((currentState) => {
           const tmpState = { ...currentState };
-          console.log(tmpState);
           tmpState.labels = languages;
           tmpState.datasets[0].data = indexes;
           return tmpState;
@@ -69,7 +68,7 @@ class Chart extends React.Component {
     };
 
     return (
-      <div id="chart">
+      <div className="chart">
         <h4>
           Used <span>LANGUAGES</span>{' '}
         </h4>
