@@ -21,3 +21,8 @@ creating a React-based interface to present data from a GitHub API in an interac
 ## Chartjs
 
 - [Chartjs - Main Page](https://www.chartjs.org/)
+
+
+#Contributors
+
+This work is done to fullfil a 2 day sprint at [Northcoders](https://northcoders.com/)
