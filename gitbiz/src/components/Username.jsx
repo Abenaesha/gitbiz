@@ -24,7 +24,7 @@ class Username extends React.Component {
           placeholder="GitHub username"
           onChange={this.handleChange}
         />
-        <button type="submit">Add your GitHub profile</button>
+        <button type="submit">Add your GitHub Profile</button>
       </form>
     );
   }

@@ -68,16 +68,16 @@ const Cards = ({ user }) => {
               </a>
             </li>
           )}
-          {followers && (
-            <li>
-              <i className="fab fa-github"></i>
-              {followers} followers on Github
-            </li>
-          )}
           {blog && (
             <li>
               <i className="fas fa-blog"></i>
               <a href={blog}>Personal Website</a>
+            </li>
+          )}
+          {followers && (
+            <li>
+              <i className="fab fa-github"></i>
+              {followers} followers on Github
             </li>
           )}
         </ul>
