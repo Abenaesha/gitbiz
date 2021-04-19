@@ -4,7 +4,7 @@ creating a React-based interface to present data from a GitHub API in an interac
 
 The basic idea is that a digital coding-centred business card is created from public information on your GitHub profile.
 
-#Tasks
+## Tasks
 
 - [ ] Draw out your interface
 - [ ] Choose which pieces of the interface can be separated into components
