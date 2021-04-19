@@ -2,6 +2,8 @@
 
 creating a React-based interface to present data from a GitHub API in an interactive and engaging way. What you display and how you display it is entirely up to you, but your app must allow users to interact with your data visualisation in some way.
 
+The basic idea is that a digital coding-centred business card is created from public information on your GitHub profile.
+
 #Tasks
 
 - [ ] Draw out your interface
@@ -24,5 +26,6 @@ creating a React-based interface to present data from a GitHub API in an interac
 
 
 #Contributors
-
 This work is done to fullfil a 2 day sprint at [Northcoders](https://northcoders.com/)
+This project was initially a pair programming sprint with [galambborong](https://github.com/galambborong).
+
