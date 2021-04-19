@@ -26,6 +26,7 @@ The basic idea is that a digital coding-centred business card is created from pu
 
 
 #Contributors
+
 This work is done to fullfil a 2 day sprint at [Northcoders](https://northcoders.com/)
 This project was initially a pair programming sprint with [galambborong](https://github.com/galambborong).
 
